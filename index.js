@@ -5,11 +5,15 @@ const PORT = 3000;  // nuestra constante PORT o puerto
 
 const authRouter = require("./routes/authRoutes");
 const greetRouter = require("./routes/greetRoutes");
+const { connectDB } = require("./data/config");
 
 // Crear la instacia del servidor
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+//Exportar conexión con la BD
+connectDB();
 
 //
 app.use("/auth", authRouter);
