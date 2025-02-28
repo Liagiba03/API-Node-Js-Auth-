@@ -16,8 +16,8 @@ app.use(express.json());
 connectDB();
 
 //
-app.use("/auth", authRouter);
-app.use("/greet", greetRouter);
+app.use("/", authRouter);   //ANTES auth
+//app.use("/greet", greetRouter);
 
 app.get('/',(req,res)=>{
     res.json({msj: "Hola desde express usando json"})
