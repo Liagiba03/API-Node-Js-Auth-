@@ -18,9 +18,9 @@ app.use(express.json());
 app.use("/", authRouter);   //ANTES auth
 //app.use("/greet", greetRouter);
 
-/*app.get('/',(req,res)=>{
+app.get('/',(req,res)=>{
     res.json({msj: "Hola desde express usando json"})
-});*/
+});
 
 /*app.get('/usr',(req,res)=>{
 
