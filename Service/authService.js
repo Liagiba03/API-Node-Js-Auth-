@@ -1,56 +1,37 @@
-const {users} = require("../data/users.js");
-const { User } = require("../models/userModel.js");
 
-//Funcion para la primer ruta
 
-//get --> /get-users
-const getAllUsers = async () =>{
-    try {
-        const users =await User.find();
-        return users;
-    } catch (error) {
-        console.log(error);
-        return null;
-        
-    }
-}
-
-//CREATE USERS
-const createUser = async (username, password)=>{
-    try {
-        const newUser = new User({username, password})
-        const savedUser = await newUser.save();
-        return savedUser;
-    } catch (error) {
-        return null;
-    }
-}
-
-//get -->login
+//POST -->login
 const login = async (user, pass) =>{
-    //COLOCAR BIEN EL TOKEN token-falso-1
-    
-    const validate= await getUserByNameAndPass(user, pass);
-    //console.log(validate);
-    // Validar usuario
-    if (validate){
-    //if (getUserByNameAndPass(user, pass)){
-        var token = `token-falso-${validate._id}`;
-       //token += getUserByNameAndPass(user, pass).id;
-        return {token};
-    }else{
-        return {message: "usuario o contraseña incorrectos"};
-    }
-}
+    const URL_USER_SERVICE = "http://localhost:4000/usr/show-user-name/";
 
-const getUserByNameAndPass = async (user, pass) =>{
-    //return users.find(usr => usr.username === user && usr.password === pass);
     try {
-        const user = User.findOne({user, pass});
-        return user;
+        const response = await fetch(URL_USER_SERVICE+user);
+        //console.log(response);
+        if(response.status ==200){
+            const userInfo = await response.json();
+            //console.log(user);
+            if(userInfo.username === user && userInfo.password === pass){
+                return {
+                    status:200,
+                    token:"token-falso-"+userInfo._id}
+            }else{
+                return {
+                    status: 403,
+                    message: "Usuario no autorizado, credenciales inválidas"
+                }
+            }
+        }else{
+            return {
+                status: 404,
+                message: "Usuario no encontrado"
+            }
+        }
     } catch (error) {
-        return null;
+        return{
+            status: 500,
+            message: error.message
+        }
     }
+    
 }
 
-module.exports= {getAllUsers, login, createUser}
