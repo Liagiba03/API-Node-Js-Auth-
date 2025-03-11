@@ -1,4 +1,4 @@
-const {login} = require("../Service/authService.js");
+const {login, createUser} = require("../Service/authService.js");
 
 
 const loginController = async (req, res) =>{
@@ -9,10 +9,19 @@ const loginController = async (req, res) =>{
     }else{
         res.status(respuesta.status).json({messsage:respuesta.message})
     }
-
 }   
 
+const createUsrController = async (req, res)=>{
+    const {username, password} = req.body;
+    const response = await createUser(username, password);
+    if(response.status ===201){
+        res.status(201).json({message: response.message});
+    }else{
+        res.status(response.status).json({message: response.message});
+    }
+}
 
 
-module.exports = {loginController
+
+module.exports = {loginController, createUsrController
 }
