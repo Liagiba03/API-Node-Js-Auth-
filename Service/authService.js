@@ -35,3 +35,42 @@ const login = async (user, pass) =>{
     
 }
 
+//CREAR USUARIOS
+const createUser = async (user, pass)=>{
+    const URL_USER_SERVICE = "http://localhost:4000/usr/create-user"
+    try {
+        const response = await fetch(URL_USER_SERVICE,{
+            method: "POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                name: user,
+                password: pass
+            })
+        });
+
+        if(response.status ===201){
+            return {
+                status: 201,
+                message: "Usuario creado"
+            }
+        }else{
+            const errorData = await response.json();
+            return {
+                status: response.status,
+                message: errorData.message || "Error al crear el usuario"
+            };
+        }
+
+    } catch (error) {
+        return{
+            status: 500,
+            message: error.message
+        }
+    }
+}
+
+
+
+module.exports= {login,createUser,}
