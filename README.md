@@ -41,14 +41,19 @@ PORT=3000
 URL= "mongodb://admin:password@localhost:27017/"
 ```
 
-### 5 Crea la imagen de docker
+### 5️⃣ Crea la imagen de docker
 ```bash
 docker compose up -d
 ```
-### 5️⃣ Inicia la aplicación:
+### 6️⃣ Inicia la aplicación:
 
 - En **modo desarrollo**:
 
   ```bash
   npm run dev
+  ```
+- En **modo producción**:
+
+  ```bash
+  npm start
   ```
