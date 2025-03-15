@@ -35,6 +35,13 @@ cd API-Node-Js-Auth-
 ```bash
 npm install
 ```
+### 4️⃣ Configura las variables necesarias:
+```env
+PORT=3000
+URL= "mongodb://admin:password@localhost:27017/"
+```
+
+### 
 
 
 Create image docker 
