@@ -41,8 +41,7 @@ PORT=3000
 URL= "mongodb://admin:password@localhost:27017/"
 ```
 
-### 
-
-
-Create image docker 
+### 5 Crea la imagen de docker
+```bash
 docker compose up -d
+```
