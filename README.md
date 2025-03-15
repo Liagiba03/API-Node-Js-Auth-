@@ -75,3 +75,17 @@ POST /api/auth/register
   "password": "contraseña_segura"
 }
 ```
+### 🔹 Inicio de sesión:
+
+```http
+POST /api/auth/login
+```
+
+**Cuerpo de la solicitud (JSON):**
+
+```json
+{
+  "username": "nombre_de_usuario",
+  "password": "contraseña_segura"
+}
+```
