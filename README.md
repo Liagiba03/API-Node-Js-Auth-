@@ -57,3 +57,21 @@ docker compose up -d
   ```bash
   npm start
   ```
+## 🛠 Uso
+
+Una vez que la API esté en ejecución, puedes interactuar con ella usando **Postman**, **cURL**, o cualquier cliente HTTP.
+
+### 🔹 Registro de usuario:
+
+```http
+POST /api/auth/register
+```
+
+**Cuerpo de la solicitud (JSON):**
+
+```json
+{
+  "username": "nombre_de_usuario",
+  "password": "contraseña_segura"
+}
+```
