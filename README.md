@@ -45,3 +45,10 @@ URL= "mongodb://admin:password@localhost:27017/"
 ```bash
 docker compose up -d
 ```
+### 5️⃣ Inicia la aplicación:
+
+- En **modo desarrollo**:
+
+  ```bash
+  npm run dev
+  ```
