@@ -89,3 +89,8 @@ POST /api/auth/login
   "password": "contraseña_segura"
 }
 ```
+### 🔹 Acceso a recurso protegido:
+
+```http
+GET /api/protected
+```
