@@ -6,12 +6,12 @@
 
 ## 📌 Índice
 
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Características](#características)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Instalación](#Instalación)
+- [Uso](#Uso)
+- [Características](#Características)
+- [Tecnologías Utilizadas](#Tecnologías-utilizadas)
 
-## 🚀 Instalación
+## Instalación
 
 Sigue estos pasos para configurar el proyecto en tu entorno local:
 
@@ -54,7 +54,7 @@ docker compose up -d
   ```bash
   npm start
   ```
-## 🛠 Uso
+## Uso
 
 Una vez que la API esté en ejecución, puedes interactuar con ella usando **Postman**, **cURL**, o cualquier cliente HTTP.
 
@@ -100,14 +100,14 @@ GET /api/protected
 }
 ```
 
-## ✨ Características
+## Características
 
 ✅ Registro e inicio de sesión con almacenamiento seguro de contraseñas.  
 ✅ Generación y verificación de tokens **JWT** para autenticación.  
 ✅ Protección de rutas con **middleware** de autenticación.  
 ✅ Gestión de roles y permisos para control de acceso granular.  
 
-## 🛠 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - [**Node.js**](https://nodejs.org/)
 - [**Express.js**](https://expressjs.com/)
