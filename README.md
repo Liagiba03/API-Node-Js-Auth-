@@ -94,3 +94,11 @@ POST /api/auth/login
 ```http
 GET /api/protected
 ```
+
+**Encabezados:**
+
+```json
+{
+  "Authorization": "Bearer token_de_acceso"
+}
+```
