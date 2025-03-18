@@ -10,9 +10,6 @@
 - [Uso](#uso)
 - [Características](#características)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
 
 ## 🚀 Instalación
 
