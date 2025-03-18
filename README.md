@@ -61,7 +61,7 @@ Una vez que la API esté en ejecución, puedes interactuar con ella usando **Pos
 ### 🔹 Registro de usuario:
 
 ```http
-POST /api/auth/register
+POST /api/auth/singup
 ```
 
 **Cuerpo de la solicitud (JSON):**
@@ -85,11 +85,6 @@ POST /api/auth/login
   "username": "nombre_de_usuario",
   "password": "contraseña_segura"
 }
-```
-### 🔹 Acceso a recurso protegido:
-
-```http
-GET /api/protected
 ```
 
 **Encabezados:**
