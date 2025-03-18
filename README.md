@@ -102,3 +102,10 @@ GET /api/protected
   "Authorization": "Bearer token_de_acceso"
 }
 ```
+
+## ✨ Características
+
+✅ Registro e inicio de sesión con almacenamiento seguro de contraseñas.  
+✅ Generación y verificación de tokens **JWT** para autenticación.  
+✅ Protección de rutas con **middleware** de autenticación.  
+✅ Gestión de roles y permisos para control de acceso granular.  
