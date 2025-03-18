@@ -109,3 +109,10 @@ GET /api/protected
 ✅ Generación y verificación de tokens **JWT** para autenticación.  
 ✅ Protección de rutas con **middleware** de autenticación.  
 ✅ Gestión de roles y permisos para control de acceso granular.  
+
+## 🛠 Tecnologías Utilizadas
+
+- [**Node.js**](https://nodejs.org/)
+- [**Express.js**](https://expressjs.com/)
+- [**Mongoose (MongoDB)**](https://mongoosejs.com/)
+- [**JSON Web Tokens (JWT)**](https://jwt.io/)
